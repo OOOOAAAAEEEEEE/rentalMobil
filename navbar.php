@@ -32,7 +32,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark">
 
                             <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                            <li><a class="dropdown-item" href="CRUD/tambahDataLapak.php">Tambah Lapak</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -48,8 +48,8 @@
                 <?php if (isset($_SESSION['fullnames'])) : ?>
 
                     <li class="nav-item">
-                        <a class="nav-link active">Selamat Datang <?php $fullnameS = $_SESSION['fullnames'];
-                                                                    echo "$fullnameS"; ?> </a>
+                        <a class="nav-link active">Selamat Datang <?php $fullnameS = $_SESSION['fullnames']; 
+                                                                                    echo "$fullnameS"; ?> </a>
                     </li>
 
                 <?php else : ?>
