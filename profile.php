@@ -1,10 +1,12 @@
+<?php include_once 'HPHeader.php'; ?>
+
 <?php
 
 if ($_SESSION['fullnames'] == true) :
 
 ?>
 
-    <?php include_once 'HPHeader.php'; ?>
+    
     <?php include_once 'navbar.php'; ?>
 
     <div class="container">
