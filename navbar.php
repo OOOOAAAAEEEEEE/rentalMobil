@@ -12,14 +12,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <?php if (isset($_GET['active'])) : ?>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="landingpage.php?active">Landing Page</a>
-                    </li>
-                <?php else : ?>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="landingpage.php?active">Landing Page</a>
-                    </li>
+                <?php if(isset($_SESSION['fullnames'])): ?>    
+
+                    <?php else: ?>
+
+                        <?php if (isset($_GET['active'])) : ?>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="landingpage.php?active">Landing Page</a>
+                            </li>
+                        <?php else : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="landingpage.php?active">Landing Page</a>
+                            </li>
+                        <?php endif; ?>
+
                 <?php endif; ?>
 
                 <?php if (isset($_SESSION['fullnames'])) : ?>
