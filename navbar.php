@@ -5,7 +5,7 @@
         <?php if (isset($_SESSION['fullnames'])) : ?>
             <a class="navbar-brand" href="dashboard.php">Rental Mobil</a>
         <?php else : ?>
-            <a class="navbar-brand" href="landingpage.php">Rental Mobil</a>
+            <a class="navbar-brand" href="index.php">Rental Mobil</a>
         <?php endif; ?>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -18,11 +18,11 @@
 
                         <?php if (isset($_GET['active'])) : ?>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="landingpage.php?active">Landing Page</a>
+                                <a class="nav-link active" aria-current="page" href="index.php?active">Landing Page</a>
                             </li>
                         <?php else : ?>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="landingpage.php?active">Landing Page</a>
+                                <a class="nav-link" aria-current="page" href="index.php?active">Landing Page</a>
                             </li>
                         <?php endif; ?>
 
@@ -60,7 +60,7 @@
 
                 <?php else : ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Login</a>
+                        <a class="nav-link" href="masuk.php">Login</a>
                     </li>
                 <?php endif; ?>
             </ul>
