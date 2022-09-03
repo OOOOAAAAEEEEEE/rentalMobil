@@ -44,26 +44,31 @@
                             </li>
                             <li><a class="dropdown-item" href="inc/logout.inc.php">Log Out</a></li>
 
-                        <?php else : ?>
+                <?php else : ?>
 
-                        <?php endif; ?>
+                <?php endif; ?>
                         </ul>
                     </li>
             </ul>
-            <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+            <ul class="navbar-nav me-1 mb-2 mb-lg-0">
                 <?php if (isset($_SESSION['fullnames'])) : ?>
 
                     <li class="nav-item">
                         <a class="nav-link active">Selamat Datang <?php $fullnameS = $_SESSION['fullnames']; 
-                                                                                    echo "$fullnameS"; ?> </a>
+                                                                                echo "$fullnameS"; ?></a>
                     </li>
 
                 <?php else : ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="masuk.php">Login</a>
-                    </li>
-                <?php endif; ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="masuk.php">Login</a>  
+                </li>
             </ul>
+            <ul class="navbar-nav me-1 mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="daftar.php"> Register</a>
+                </li>
+            </ul>
+                <?php endif; ?>
         </div>
     </div>
 </nav>

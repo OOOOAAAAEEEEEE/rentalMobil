@@ -47,7 +47,7 @@
                         </ul>
                     </li>
             </ul>
-            <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+            <ul class="navbar-nav me-1 mb-2 mb-lg-0">
                 <?php if (isset($_SESSION['fullnames'])) : ?>
 
                     <li class="nav-item">
