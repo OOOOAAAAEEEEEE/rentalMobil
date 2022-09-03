@@ -39,7 +39,7 @@ function createUser($conn, $fullname, $email, $username, $pwd, $no_telp, $addres
     mysqli_stmt_bind_param($stmt, "ssssss", $fullname, $email, $username, $hashPwd, $no_telp, $address);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("Location: ../index.php?berhasil");
+    header("Location: ../masuk.php?berhasil");
     exit();
 }
 
