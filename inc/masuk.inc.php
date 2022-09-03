@@ -1,6 +1,6 @@
 <?php 
 
-include 'login_function.inc.php';
+require 'login_function.inc.php';
 
 if (isset($_POST['kirim1'])) {
     
