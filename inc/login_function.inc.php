@@ -64,6 +64,7 @@ function loginUser($conn, $username, $pwd){
             $_SESSION['ids'] = $userExist['id'];
             $_SESSION['fullnames'] = $userExist['fullname'];
             $_SESSION['usernames'] = $userExist['username'];
+            $_SESSION['no_telps'] = $userExist['no_telp'];
             $_SESSION['roles'] = $userExist['role'];
 
             $adminRole = $_SESSION['roles'] == 1;
