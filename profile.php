@@ -20,7 +20,7 @@ if ($_SESSION['fullnames'] == true) :
 else :
     session_unset();
     session_destroy();
-    header("Location: landingpage.php");
+    header("Location: index.php");
     exit();
 
 
