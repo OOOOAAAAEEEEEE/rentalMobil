@@ -17,7 +17,7 @@ if ($_SESSION['fullnames'] == true) :
         ?>
 
     <?php foreach($detail_fetch_assoc as $detail_tb_lapak): ?>
-        <div class="container">
+        <div class="container-xxl">
             <div class="float-none">
                 <div class="card">
                     <img src="..." class="card-img-top" alt="...">
@@ -49,12 +49,20 @@ if ($_SESSION['fullnames'] == true) :
                         <li class="ms-3 list-group-item">No Telephone : <?= htmlspecialchars($detail_tb_lapak['no_telp_tb_user']) ?></li>
                         <li class="ms-3 list-group-item">Alamat : <?= htmlspecialchars($detail_tb_lapak['alamat_tb_user']) ?></li>
                     </ul>
-                    <div class="card-body">
-                        <a class="ms-3 btn btn-primary" href="checkout.php" class="card-link">Checkout</a>
-                            <?php if($_SESSION['ids'] == $detail_tb_lapak['id_tb_user']): ?>
-                        <a class="ms-3 btn btn-warning" href="#" >Edit Postingan</a>
-                        <a class="ms-3 btn btn-danger" href="hapusPrompt.php?id=<?=$id=$_GET['id'];?>" >Hapus Postingan</a>
-                            <?php endif; ?>
+                    <div class="card-body" style="text-align: center;">
+                        <div class="row row-cols-4">
+                            <div class="col-4">
+                                <a class="btn btn-primary" href="checkout.php" class="card-link">Checkout</a>
+                            </div>
+                            <div class="col-4">
+                                <?php if($_SESSION['ids'] == $detail_tb_lapak['id_tb_user']): ?>
+                                <a class="btn btn-warning" href="#" >Edit Postingan</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="btn btn-danger" href="hapusPrompt.php?id=<?=$id=$_GET['id'];?>" >Hapus Postingan</a>
+                            </div>
+                        </div>
+                                <?php endif; ?>
                     </div>
                 </div>
             </div>

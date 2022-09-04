@@ -8,8 +8,8 @@
 
 <?php include_once 'navbar.php'; ?>
 
-    <div class="container">
-        <div class="d-flex justify-content-center">
+    <div class="container-xxl">
+        <div class="">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -49,17 +49,15 @@
             <tbody>
                 <tr>
                     <td>
-                        <div class="ms-3">
-                            <div class="card ms-5 mt-3 mb-5" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h3 class="card-title"> <?= htmlspecialchars($tb_lapak['merk']); ?> </h3>
-                                        <h5 class="card-title"> <?= htmlspecialchars($tb_lapak['sub_merk']); ?> </h5>
-                                        <p class="card-text" style="text-align: center;"> Harga Sewa Perhari</p>
-                                        <p class="card-text" style="text-align: center;"> <?= htmlspecialchars($tb_lapak['harga']); ?> </p>
-                                        <a class="btn btn-primary" href="CRUD/detail.php?id=<?=$tb_lapak['id'];?>" > Detail</a>
-                                    </div>
-                            </div>
+                        <div class="card ms-5 mt-4 mb-1 me-4" style="width: 21rem; height:15rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title"> <?= htmlspecialchars($tb_lapak['merk']); ?> </h3>
+                                    <h5 class="card-title"> <?= htmlspecialchars($tb_lapak['sub_merk']); ?> </h5>
+                                    <p class="card-text" style="text-align: center;"> Harga Sewa Perhari</p>
+                                    <p class="card-text" style="text-align: center;"> <?= htmlspecialchars($tb_lapak['harga']); ?> </p>
+                                    <a class="btn btn-primary" href="CRUD/detail.php?id=<?=$tb_lapak['id'];?>" > Detail</a>
+                                </div>
                         </div>
                     </td>
                 </tr>
@@ -68,7 +66,7 @@
         </div>
         <?php endforeach; ?>
     </div>
-    
+
 <?php include_once 'HPfooter.php'; ?>
 
 <?php else :

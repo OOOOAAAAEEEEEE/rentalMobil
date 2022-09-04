@@ -84,9 +84,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link active">Selamat Datang <?php $fullnameS = $_SESSION['fullnames']; 
-                                                                                echo "$fullnameS";
-                                                                        $idS = $_SESSION['ids'];
-                                                                                //echo "$idS" ?></a>
+                                                                                echo "$fullnameS"; ?></a>
                     </li>
 
                 <?php else : ?>

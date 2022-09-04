@@ -26,7 +26,35 @@
                 <?php endif; ?>
 
                 <?php if (isset($_SESSION['fullnames'])) : ?>
+                    
+                    <?php 
+                    include '../inc/conn.inc.php';
+                    $idSesi = $_SESSION['ids'];
+                    $alamatSesi = $_SESSION['alamats'];
+                    $fullnameSesi = $_SESSION['fullnames'];
+                    $no_telpSesi = $_SESSION['no_telps'];
 
+                    $checkFullnameQuery = mysqli_query($conn, "SELECT * FROM 
+                    tb_lapak WHERE id_tb_user='$idSesi';");
+                    $checkFullnames = mysqli_fetch_all($checkFullnameQuery, MYSQLI_ASSOC);
+                    foreach($checkFullnames as $checkFullname);
+
+                        if( $fullnameSesi !== $checkFullname['fullname_tb_user'] ||
+                            $alamatSesi !== $checkFullname['alamat_tb_user'] ||
+                            $no_telpSesi !== $checkFullname['no_telp_tb_user']
+
+                        ):
+                    ?>
+                        <li class="nav-item">
+                            <form action="../inc/dashboard.inc.php" method="POST">
+                                <button class="btn btn-dark nav-link" name="checkIntegrity">
+                                    Update
+                                </button>
+                            </form>
+                        </li>
+                    <?php else: ?>
+
+                    <?php endif; ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Lainnya
