@@ -1,5 +1,33 @@
 <?php
+
 require 'conn.inc.php';
 
 $select_query = mysqli_query($conn, "SELECT * FROM tb_lapak;");
 $fetch_tb_lapak_assoc = mysqli_fetch_all($select_query, MYSQLI_ASSOC);
+
+if(isset($_POST['checkIntegrity'])){
+
+        function checkIntegrity(){
+        session_start();
+        require 'conn.inc.php';
+
+        $idSesi = $_SESSION['ids'];
+
+        $select_query = mysqli_query($conn, "SELECT * FROM tb_lapak WHERE id_tb_user='$idSesi';");
+        $navbar_assocs = mysqli_fetch_all($select_query, MYSQLI_ASSOC);
+        foreach($navbar_assocs as $navbar_assoc);
+
+            $idTetap = $navbar_assoc['id_tb_user'];
+            $fullnameTetap = $_SESSION['fullnames'];
+            $no_telpTetap = $_SESSION['no_telps'];
+            $alamatTetap = $_SESSION['alamats'];
+            
+            mysqli_query($conn, "UPDATE tb_lapak SET 
+            fullname_tb_user='$fullnameTetap',
+            no_telp_tb_user='$no_telpTetap',
+            alamat_tb_user='$alamatTetap' WHERE id_tb_user='$idTetap';");
+            
+            header("Location:../suksesPrompt.php");
+    }
+    return checkIntegrity();
+}

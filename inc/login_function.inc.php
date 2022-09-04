@@ -47,7 +47,7 @@ function loginUser($conn, $username, $pwd){
     $userExist = userExist($conn, $username);
 
         if($userExist === false){
-            header("Location: ../index.php?error=AccNotFound");
+            header("Location: ../masuk.php?error=AccNotFound");
             exit();
         }
 
@@ -63,8 +63,10 @@ function loginUser($conn, $username, $pwd){
             session_start();
             $_SESSION['ids'] = $userExist['id'];
             $_SESSION['fullnames'] = $userExist['fullname'];
+            $_SESSION['emails'] = $userExist['email'];
             $_SESSION['usernames'] = $userExist['username'];
             $_SESSION['no_telps'] = $userExist['no_telp'];
+            $_SESSION['alamats'] = $userExist['alamat'];
             $_SESSION['roles'] = $userExist['role'];
 
             $adminRole = $_SESSION['roles'] == 1;
