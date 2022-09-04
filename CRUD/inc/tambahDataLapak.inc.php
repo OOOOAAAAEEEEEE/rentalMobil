@@ -2,8 +2,9 @@
 
 session_start();
 
-$fullnameS = $_SESSION['fullnames'];
 $id_tb_user = $_SESSION['ids'];
+$no_telp  = $_SESSION['no_telps'];
+$fullnameS = $_SESSION['fullnames'];
 
 require '../../inc/conn.inc.php';
 
@@ -40,9 +41,9 @@ if(isset($_POST['submit'])){
                                                     exit();
                                                 }else{
                                                     $deskripsi = $_POST['deskripsi'];
-                                                    $insertData = mysqli_query($conn, 
-                                                    "INSERT INTO tb_lapak (id_tb_user, merk, sub_merk, tipe_mobil, no_polisi, warna, harga, submit_with, deskripsi) 
-                                                    VALUES ('$id_tb_user' ,'$merk','$sub_merk','$tipe_mobil','$no_polisi','$warna','$harga','$fullnameS','$deskripsi');
+                                                    mysqli_query($conn, 
+                                                    "INSERT INTO tb_lapak (id_tb_user, no_telp_tb_user, fullname_tb_user, merk, sub_merk, tipe_mobil, no_polisi, warna, harga, deskripsi) 
+                                                    VALUES ('$id_tb_user' ,'$no_telp','$fullname_tb_user','$merk','$sub_merk','$tipe_mobil','$no_polisi','$warna','$harga','$deskripsi');
                                                     ");
                                                     header("Location: ../suksesPrompt.php");
                                                     exit();

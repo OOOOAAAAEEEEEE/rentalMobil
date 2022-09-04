@@ -25,15 +25,29 @@ if ($_SESSION['fullnames'] == true) :
                         <h3 class="ms-3 card-title"> <?= htmlspecialchars($detail_tb_lapak['merk']); ?> </h3>
                         <h5 class="ms-3 card-title"> <?= htmlspecialchars($detail_tb_lapak['sub_merk']); ?> </h5>
 
-                        <p class="ms-3 card-text"> Deskripsi Barang </p>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Deskripsi Barang
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <?= htmlspecialchars($detail_tb_lapak['deskripsi']); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="ms-3 list-group-item">Tipe Mobil : <?= htmlspecialchars($detail_tb_lapak['tipe_mobil']); ?></li>
                         <li class="ms-3 list-group-item">No Polisi : <?= htmlspecialchars($detail_tb_lapak['no_polisi']); ?></li>
                         <li class="ms-3 list-group-item">Warna Mobil : <?= htmlspecialchars($detail_tb_lapak['warna']) ?></li>
                         <li class="ms-3 list-group-item">Harga Sewa Mobil Perhari : <?= htmlspecialchars($detail_tb_lapak['harga']) ?></li>
-                        <li class="ms-3 list-group-item">Pemilik : <?= htmlspecialchars($detail_tb_lapak['submit_with']) ?></li>
-                    
+                        <li class="ms-3 list-group-item">Pemilik : <?= htmlspecialchars($detail_tb_lapak['fullname_tb_user']) ?></li>
+                        <li class="ms-3 list-group-item">No Telephone : <?= htmlspecialchars($detail_tb_lapak['no_telp_tb_user']) ?></li>
+                        <li class="ms-3 list-group-item">Alamat : <?= htmlspecialchars($detail_tb_lapak['alamat_tb_user']) ?></li>
                     </ul>
                     <div class="card-body">
                         <a class="ms-3 btn btn-primary" href="checkout.php" class="card-link">Checkout</a>
