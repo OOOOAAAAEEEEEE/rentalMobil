@@ -1,0 +1,86 @@
+git init (untuk membuat repository baru pada folder)
+
+git status (untuk mengecek file pada status apa)
+
+git add (untuk menambah file ke staging area)
+
+git commit <Additional> (untuk menambah file ke repository secara permanen) 
+-m (untuk menambah message) 
+--ammend (untuk merge antara commit baru dengan commit pada head)
+
+git diff(untuk melihat perubahan pada file yang kita ingin kita lihat atau bisa dilihat pada vsCode)
+
+git difftool(untuk melihat perubahan pada vsCode)
+
+git restore <namafile.ext> <Additional> (untuk merestore data ke state terakhir yang ada pada repository, dan hanya berlaku pada 
+Working Directory)
+--staged (untuk mengembalikan status dari state Stage Area ke state Working Directory)
+
+git clean -f (untuk menghapus seluruh perubahan file pada Working Directory)
+
+git reset <mode.Additional> <hash> (modenya ada 3 --soft, --mixed, --hard) 
+--soft (memindahkan HEAD pointer, namun tidak melakukan perubahan apapun di Staging Area dan Working Directory)
+--mixed default (memindahkan HEAD pointer, mengubah Staging Area menjadi sama seperti Repository, namun tidak mengubah apapun di 
+Working Directory)
+
+--hard (memindahkan HEAD pointer, dan mengubah Stagin Index dan Working Directory sehingga sama dengan Repository)
+
+git log <Additional> (untuk mengecek perubahan apa saja yang pernah di buat) 
+--oneline (untuk menyederhanakan)
+
+git show <hash> (untuk melihat detail pada commit yang terdapat pada repo)
+
+git checkout <hash> --<namafile.ext> (untuk melihat isi file pada versi commit tertentu, dan statusnya akan berada pada 
+Staging Area, untuk mengembalikannya menggunakan git restore, atau bisa juga di save)\
+
+git checkout <hash> (untuk melihat snapshot pada versi commit tertentu)
+
+git blame <namafile.ext> (untuk melihat detail kode siapa yang merubah setiap barisnya)
+
+git branch <Additional> (untuk melihat list branch yang tersedia)
+-m <namabranchbaru> (untuk rename branch yang sedang kita tempati)
+-d <namabranch> (untuk menghapus branch, syaratnya harus di branch lain saat ingin menghapus)
+--delete <namabranch> (untuk menghapus branch, syaratnya harus di branch lain saat ingin menghapus)
+
+git branch <namabranch> (untuk membuat branch bar)
+
+git switch <namabranch> (untuk pindah ke branch yang kita inginkan)
+git checkout <namabranch> (untuk pindah ke branch yang kita inginkan)
+
+git merge <namabranch> (untuk menggabungkan branch, syaratnya kita harus ke posisi branch yang kita ingin gabungkan
+contohnya harus di branch master, lalu git merge <namabranch> yang kita ingin merge)
+
+CONFLICT
+git merge --abort
+
+git cherry-pick <hashnya>
+
+REMOTE
+
+ssh-keygen (untuk generate sshkeygen kita pertama kalinya pada pc kita sendiri)
+tekan enter (untuk lanjut ke step selanjutnya "Memilih Lokasi instal .ssh Kita")
+masukkan pasword (bisa kosong)
+
+
+git remote add <namaremotenya> <sshKey> (untuk menginialisasi remote di folder utama)
+
+git remote get-url <namaremotenya> (untuk melihat lokasi origin berada pada gitServer apa, harus di directory yang sudah di
+git remote)
+
+git remote rm <namaremotenya> (untuk menghapus remote repositorynya)
+
+ssh -T git@github.com (untuk test ke github apakah sudah terhubung atau belum sshTerminal kita)\
+
+PUSH
+
+git push <namaremotenya> localbranch (untuk push namabranchnya sama dengan localbranch)
+git push <namaremotenya> localbranch:remotebranch (untuk push tetapi nama branchnya berbeda saat di remotebranchnya)
+git push origin --all (untuk push semua branch yang ada pada gitServer)
+git push origin --delete <namaremotenya> <namabranch> (untuk menghapus branch pada git server)
+
+CLONE
+
+git clone <urlremoterepository> (secara default akan membuat project dengan nama folder yang sama dengan nama project remote repo)
+git clone <urlremoterepository> <namafolder>
+
+git ssh url git@github.com:OOOOAAAAEEEEEE/rentalMobil-remote.git
