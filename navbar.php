@@ -66,7 +66,7 @@
 
                         <ul class="dropdown-menu dropdown-menu-dark">
 
-                            <li><a class="dropdown-item" href="profile.php?id=">Profile</a></li>
+                            <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                             <li><a class="dropdown-item" href="CRUD/tambahDataLapak.php">Tambah Lapak</a></li>
                             <li>
                                 <hr class="dropdown-divider">
