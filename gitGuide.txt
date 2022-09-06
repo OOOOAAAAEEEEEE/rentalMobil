@@ -42,7 +42,7 @@ git branch <Additional> (untuk melihat list branch yang tersedia)
 -d <namabranch> (untuk menghapus branch, syaratnya harus di branch lain saat ingin menghapus)
 --delete <namabranch> (untuk menghapus branch, syaratnya harus di branch lain saat ingin menghapus)
 
-git branch <namabranch> (untuk membuat branch bar)
+git branch <namabranch> (untuk membuat branch baru)
 
 git switch <namabranch> (untuk pindah ke branch yang kita inginkan)
 git checkout <namabranch> (untuk pindah ke branch yang kita inginkan)
