@@ -12,10 +12,10 @@ if ($_SESSION['fullnames'] == true) :
     <div class="container-xxl">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="profile.php?id=">Your Profile</a>
+                <a class="nav-link" aria-current="page" href="profile.php">Your Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="profilePost.php?id=">Your Post</a>
+                <a class="nav-link active" href="profilePost.php">Your Post</a>
             </li>
         </ul>
         
