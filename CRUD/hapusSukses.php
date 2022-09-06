@@ -12,10 +12,10 @@ if ($_SESSION['fullnames'] == true) :
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h5> Hapus Berhasil Lapak </h5>
+                <h5> Hapus Post Berhasil! </h5>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Lapak anda sudah berhasil di hapus.</h5>
+                <h5 class="card-title">Post anda sudah berhasil di hapus.</h5>
                 <p class="card-text">Silahkan kembali dashboard anda, Terimakasih!.</p>
                 <a href="../dashboard.php" class="btn btn-primary">Kembali ke Dashboard anda</a>
             </div>

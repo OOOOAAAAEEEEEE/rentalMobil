@@ -50,16 +50,19 @@ if ($_SESSION['fullnames'] == true) :
                         <li class="ms-3 list-group-item">Alamat : <?= htmlspecialchars($detail_tb_lapak['alamat_tb_user']) ?></li>
                     </ul>
                     <div class="card-body" style="text-align: center;">
-                        <div class="row row-cols-4">
-                            <div class="col-4">
-                                <a class="btn btn-primary" href="checkout.php" class="card-link">Checkout</a>
+                        <div class="row row-cols-">
+                            <div class="col">
+                                <a class="btn btn-primary" href="../dashboard.php" class="card-link">Kembali</a>
                             </div>
-                            <div class="col-4">
+                            <div class="col">
+                                <a class="btn btn-success" href="checkout.php" class="card-link">Checkout</a>
+                            </div>
+                            <div class="col">
                                 <?php if($_SESSION['ids'] == $detail_tb_lapak['id_tb_user']): ?>
-                                <a class="btn btn-warning" href="#" >Edit Postingan</a>
+                                <a class="btn btn-warning" href="#" >Edit Post</a>
                             </div>
-                            <div class="col-4">
-                                <a class="btn btn-danger" href="hapusPrompt.php?id=<?=$id=$_GET['id'];?>" >Hapus Postingan</a>
+                            <div class="col">
+                                <a class="btn btn-danger" href="hapusPrompt.php?id=<?=$id=$_GET['id'];?>" >Hapus Post</a>
                             </div>
                         </div>
                                 <?php endif; ?>

@@ -77,9 +77,19 @@
             </ul>
             <ul class="navbar-nav me-1 mb-2 mb-lg-0">
                 <?php if (isset($_SESSION['fullnames'])) : ?>
+                    
+                    <?php  
+                        require '../inc/conn.inc.php';
+                        $id_SESSION = $_SESSION['ids'];
+
+                        $query_tb_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE id='$id_SESSION';");
+                        $fetch_tb_users = mysqli_fetch_all($query_tb_user, MYSQLI_ASSOC);
+                        
+                        foreach($fetch_tb_users as $fetch_tb_user);
+                    ?>
 
                     <li class="nav-item">
-                        <a class="nav-link active">Selamat Datang <?php $fullnameS = $_SESSION['fullnames']; 
+                        <a class="nav-link active">Selamat Datang <?php $fullnameS = $fetch_tb_user['fullname']; 
                                                                                     echo "$fullnameS"; ?> </a>
                     </li>
 
