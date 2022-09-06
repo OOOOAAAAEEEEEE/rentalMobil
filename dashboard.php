@@ -45,9 +45,9 @@
             <?php foreach($fetch_tb_lapak_assoc as $tb_lapak): ?>
                 <div class="">
                     <div class="col">
-                        <div class="card mx-md-3 mx-lg-auto mt-3" style="width: 18.5rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
+                        <div class="card mx-md-3 mx-lg-auto mb-3" style="width: 18.5rem;">
+                            <img src="https://via.placeholder.com/100" class="card-img-top img-thumbnail" alt="...">
+                                <div class="card-body shadow-lg bg-body rounded p-4">
                                     <h3 class="card-title"> <?= htmlspecialchars($tb_lapak['merk']); ?> </h3>
                                     <h5 class="card-title"> <?= htmlspecialchars($tb_lapak['sub_merk']); ?> </h5>
                                     <p class="card-text" style="text-align: center;"> Harga Sewa Perhari</p>
