@@ -8,7 +8,7 @@
 
 <?php include_once 'navbar.php'; ?>
 
-    <div class="container-xxl">
+    <div class="container">
         <div class="">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -32,24 +32,20 @@
                     </button>
             </div>
         </div>
-
         <hr>
+    </div>
+        
         <?php
 
         require 'inc/dashboard.inc.php';
 
         ?>
-
-    <?php foreach($fetch_tb_lapak_assoc as $tb_lapak): ?>
-        <div class="float-start">
-        <table>
-            <thead>
-                <!--  -->
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="card ms-5 mt-4 mb-1 me-4" style="width: 21rem; height:15rem;">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4">
+            <?php foreach($fetch_tb_lapak_assoc as $tb_lapak): ?>
+                <div class="">
+                    <div class="col">
+                        <div class="card mx-md-3 mx-lg-auto mt-3" style="width: 18.5rem;">
                             <img src="..." class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title"> <?= htmlspecialchars($tb_lapak['merk']); ?> </h3>
@@ -59,12 +55,10 @@
                                     <a class="btn btn-primary" href="CRUD/detail.php?id=<?=$tb_lapak['id'];?>" > Detail</a>
                                 </div>
                         </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
     </div>
 
 <?php include_once 'HPfooter.php'; ?>

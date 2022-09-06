@@ -49,20 +49,28 @@ if ($_SESSION['fullnames'] == true) :
                         <li class="ms-3 list-group-item">No Telephone : <?= htmlspecialchars($detail_tb_lapak['no_telp_tb_user']) ?></li>
                         <li class="ms-3 list-group-item">Alamat : <?= htmlspecialchars($detail_tb_lapak['alamat_tb_user']) ?></li>
                     </ul>
-                    <div class="card-body" style="text-align: center;">
-                        <div class="row row-cols-">
+                    <div class="card-body text-center">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
                             <div class="col">
-                                <a class="btn btn-primary" href="../dashboard.php" class="card-link">Kembali</a>
+                                <div class="d-grid gap-1">
+                                    <a class="btn btn-primary" href="../dashboard.php" class="card-link">Kembali</a>
+                                </div>
                             </div>
                             <div class="col">
-                                <a class="btn btn-success" href="checkout.php" class="card-link">Checkout</a>
+                                <div class="d-grid gap-1 mt-3 mt-sm-0 mt-md-0">
+                                    <a class="btn btn-success" href="../checkout.php" class="card-link">Checkout</a>
+                                </div>
+                            </div>
+                            <?php if($_SESSION['ids'] == $detail_tb_lapak['id_tb_user']): ?>
+                            <div class="col">
+                                <div class="d-grid gap-1 mt-3 mt-sm-3 mt-lg-0 mt-xl-0">
+                                    <a class="btn btn-warning" href="#" >Edit Post</a>
+                                </div>
                             </div>
                             <div class="col">
-                                <?php if($_SESSION['ids'] == $detail_tb_lapak['id_tb_user']): ?>
-                                <a class="btn btn-warning" href="#" >Edit Post</a>
-                            </div>
-                            <div class="col">
-                                <a class="btn btn-danger" href="hapusPrompt.php?id=<?=$id=$_GET['id'];?>" >Hapus Post</a>
+                                <div class="d-grid gap-1 mt-3 mt-sm-9 mt-lg-0">
+                                    <a class="btn btn-danger" href="hapusPrompt.php?id=<?=$id=$_GET['id'];?>" >Hapus Post</a>
+                                </div>
                             </div>
                         </div>
                                 <?php endif; ?>
