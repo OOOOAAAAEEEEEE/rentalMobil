@@ -23,7 +23,7 @@ foreach($fetch_assoc as $tb_lapak);
                 <h5>Tambah Lapak</h5>
             </div>
                 <div class="card-body">
-                    <form action="inc/edit.inc.php" method="POST">
+                    <form action="inc/edit.inc.php?id=<?=$id_GET;?>" method="POST">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                             <div class="col">
                                 <div class="">
@@ -44,7 +44,7 @@ foreach($fetch_assoc as $tb_lapak);
                                         $value = $tb_lapak['tipe_mobil'];
                                     ?>
                                     <select class="form-select" name="tipe_mobil">
-                                        <option value="<?php $value;?>"><?=$value;?> || Current Position</option>
+                                        <option value="<?php htmlspecialchars($value);?>"><?=$value;?> || Current Position</option>
                                         <option value="Sedan">Sedan</option>
                                         <option value="Hatchback">Hatchback</option>
                                         <option value="MPV">MPV</option>
