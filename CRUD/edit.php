@@ -83,13 +83,19 @@ foreach($fetch_assoc as $tb_lapak);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="mt-4">
-                                <div class="col">
-                                    <button class="btn btn-warning" name="edit" type="submit"> Edit Post </button>
+                                <div class="col mt-3">
+                                    <div class="d-grid gap-1">
+                                        <a class="btn btn-primary" href="detail.php?id=<?=$id_GET;?>"> Kembali</a>    
+                                    </div>
                                 </div>
-                            <div class="mt-4">
+                                <div class="col mt-3">
+                                    <div class="d-grid gap-1">
+                                        <button class="btn btn-warning" name="edit" type="submit"> Edit Post </button>
+                                    </div>
+                                </div>
                         </div>
-                    </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

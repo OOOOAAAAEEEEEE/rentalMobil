@@ -49,6 +49,7 @@ if ($_SESSION['fullnames'] == true) :
                         <li class="ms-3 list-group-item">Pemilik : <?=htmlspecialchars($detail_tb_lapak['fullname_tb_user']);?></li>
                         <li class="ms-3 list-group-item">No Telephone : <?=htmlspecialchars($detail_tb_lapak['no_telp_tb_user']);?></li>
                         <li class="ms-3 list-group-item">Alamat : <?=htmlspecialchars($detail_tb_lapak['alamat_tb_user']);?></li>
+                        <li class="ms-3 list-group-item">Tanggal Submit : <?=htmlspecialchars($detail_tb_lapak['created_at']);?></li>
                     </ul>
                     <div class="card-body text-center">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">

@@ -3,7 +3,7 @@
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
     <div class="container">
         <?php if (isset($_SESSION['fullnames'])) : ?>
-            <a class="navbar-brand" href="dashboard.php">Rental Mobil</a>
+            <a class="navbar-brand" href="dashboard.php?active">Rental Mobil</a>
         <?php else : ?>
             <a class="navbar-brand" href="index.php">Rental Mobil</a>
         <?php endif; ?>
@@ -58,6 +58,16 @@
                     <?php //else: ?>
 
                     <?php //endif; ?>
+                
+                <?php if(isset($_GET['active'])): ?>\
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="dashboard.php?active"> Dashboard </a>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="dashboard.php?active"> Dashboard </a>
+                    </li>
+                <?php endif; ?>
 
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -39,7 +39,9 @@ if ($_SESSION['fullnames'] == true) :
                                         <h5 class="card-title"> <?= htmlspecialchars($tb_lapak['sub_merk']); ?> </h5>
                                         <p class="card-text" style="text-align: center;"> Harga Sewa Perhari</p>
                                         <p class="card-text" style="text-align: center;"> <?= htmlspecialchars($tb_lapak['harga']); ?> </p>
-                                        <a class="btn btn-primary" href="CRUD/detail.php?id=<?=$tb_lapak['id'];?>" > Detail</a>
+                                        <div class="d-grid gap-1">
+                                            <a class="btn btn-primary" href="CRUD/detail.php?id=<?=$tb_lapak['id'];?>" > Detail</a>
+                                        </div>
                                     </div>
                             </div>
                         </div>

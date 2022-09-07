@@ -3,7 +3,7 @@
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
     <div class="container">
         <?php if (isset($_SESSION['fullnames'])) : ?>
-            <a class="navbar-brand" href="../dashboard.php">Rental Mobil</a>
+            <a class="navbar-brand" href="../dashboard.php?active">Rental Mobil</a>
         <?php else : ?>
             <a class="navbar-brand" href="../index.php">Rental Mobil</a>
         <?php endif; ?>
@@ -13,6 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if(isset($_SESSION['fullnames'])): ?>
+
                 <?php else: ?>
                     <?php if (isset($_GET['active'])) : ?>
                         <li class="nav-item">
@@ -55,6 +56,19 @@
                     <?php //else: ?>
 
                     <?php //endif; ?>
+                    <?php if(isset($_GET['active'])): ?>
+
+                    <li class="nav-item">
+                        <a href="../dashboard.php?active" class="nav-link active"> Dashboard </a>
+                    </li>
+
+                    <?php else: ?>
+
+                    <li class="nav-item">
+                        <a href="../dashboard.php?active" class="nav-link"> Dashboard </a>
+                    </li>
+
+                    <?php endif; ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Lainnya
