@@ -9,7 +9,7 @@
     
 <?php include_once 'navbar.php'; ?>
 
-    <div class="container-xxl">
+    <div class="container">
         <div class="card">
             <div class="card-header">
                 <h5>Tambah Lapak</h5>
