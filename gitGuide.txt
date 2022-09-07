@@ -82,5 +82,5 @@ CLONE
 
 git clone <urlremoterepository> (secara default akan membuat project dengan nama folder yang sama dengan nama project remote repo)
 git clone <urlremoterepository> <namafolder>
-
+git clone --branch <namabranch> <sshurl>
 git ssh url git@github.com:OOOOAAAAEEEEEE/rentalMobil-remote.git
