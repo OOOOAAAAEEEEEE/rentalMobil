@@ -34,14 +34,14 @@ if ($_SESSION['fullnames'] == true) :
                     <div class="row row-cols-1">
                         <form action="inc/profile.inc.php" method="POST" enctype="multipart/form-data">
                             <div class="col">
-                                <input class="form-control" name="my_image" type="file" required>
+                                <input class="form-control" name="my_image" type="file">
                             </div>
                             <div class="col">
                                 <div class="d-grid gap-1">
-                                    <button type="submit" name="kirim" class="btn btn-primary" > Submit </button>
+                                    
                                 </div>
                             </div>
-                        </form>    
+                          
                     </div>
                 </div>
             </div>
@@ -52,11 +52,23 @@ if ($_SESSION['fullnames'] == true) :
         <div class="card">
             <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">Nama Panjang : <?=$loop_select['fullname'];?></li>
-                <li class="list-group-item">Username : <?=$loop_select['username']?></li>
-                <li class="list-group-item">Email : <?=$loop_select['email'];?></li>
-                <li class="list-group-item">No Telephone : <?=$loop_select['no_telp'];?></li>
-                <li class="list-group-item">Alamat : <?=$loop_select['alamat'];?></li>
+                <li class="list-group-item">Nama Panjang <input type="text" name="fullname" class="form-control" value="<?=$loop_select['fullname'];?>"></li>
+                <li class="list-group-item">Username <input type="text" name="username" class="form-control" value="<?=$loop_select['username']?>"></li>   
+                <li class="list-group-item">Email <input type="text" name="email" class="form-control" value="<?=$loop_select['email'];?>"></li>
+                <li class="list-group-item">No Telephone <input type="text" name="no_telp" class="form-control" value="<?=$loop_select['no_telp'];?>"></li>
+                <li class="list-group-item">Alamat <input type="text" class="form-control" name="alamat" value="<?=$loop_select['alamat']; ?>">
+                
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" name="kirim" class="btn btn-primary" > Submit Profile </button>
+                                    <button type="submit" name="kirim1" class="btn btn-warning"> Edit Field </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </form>
             </ul>
             </div>
         </div>

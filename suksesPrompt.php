@@ -12,10 +12,10 @@ if ($_SESSION['fullnames'] == true) :
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h5> Penambahan Photo Profile Berhasil! </h5>
+                <h5> Profile Anda Berhasil Diperbarui! </h5>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Data profile picture anda berhasil diperbarui.</h5>
+                <h5 class="card-title">Data anda berhasil diperbarui.</h5>
                 <p class="card-text">Silahkan cek profile anda, Terimakasih!.</p>
                 <a href="profile.php" class="btn btn-primary">Kembali ke profile anda</a>
             </div>

@@ -11,13 +11,13 @@ if ($_SESSION['fullnames'] == true) :
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h5> Penambahan Gambar Profil Gagal! </h5>
+                <h5> Profile Tidak Dapat Diperbarui! </h5>
             </div>
             <div class="card-body">
                 <h5 class="card-title">Alasan: Tidak sesuai syarat</h5>
                 <p class="card-text">File yang anda upload lebih dari 4MB atau file yang anda upload bukan gambar.
                 </p>
-                <a href="profile.php" class="btn btn-primary">Upload ulang gambar profil anda</a>
+                <a href="profile.php" class="btn btn-primary"> Kembali ke profile anda</a>
             </div>
         </div>
     </div>
