@@ -41,13 +41,14 @@ if ($_SESSION['fullnames'] == true) :
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="ms-3 list-group-item">Tipe Mobil : <?= htmlspecialchars($detail_tb_lapak['tipe_mobil']); ?></li>
-                        <li class="ms-3 list-group-item">No Polisi : <?= htmlspecialchars($detail_tb_lapak['no_polisi']); ?></li>
-                        <li class="ms-3 list-group-item">Warna Mobil : <?= htmlspecialchars($detail_tb_lapak['warna']) ?></li>
-                        <li class="ms-3 list-group-item">Harga Sewa Mobil Perhari : <?= htmlspecialchars($detail_tb_lapak['harga']) ?></li>
-                        <li class="ms-3 list-group-item">Pemilik : <?= htmlspecialchars($detail_tb_lapak['fullname_tb_user']) ?></li>
-                        <li class="ms-3 list-group-item">No Telephone : <?= htmlspecialchars($detail_tb_lapak['no_telp_tb_user']) ?></li>
-                        <li class="ms-3 list-group-item">Alamat : <?= htmlspecialchars($detail_tb_lapak['alamat_tb_user']) ?></li>
+                        <form action="inc/edit.inc.php" method="POST"></form>
+                        <li class="ms-3 list-group-item">Tipe Mobil : <?=htmlspecialchars($detail_tb_lapak['tipe_mobil']);?></li>
+                        <li class="ms-3 list-group-item">No Polisi : <?=htmlspecialchars($detail_tb_lapak['no_polisi']);?></li>
+                        <li class="ms-3 list-group-item">Warna Mobil : <?=htmlspecialchars($detail_tb_lapak['warna']);?></li>
+                        <li class="ms-3 list-group-item">Harga Sewa Mobil Perhari : <?=htmlspecialchars($detail_tb_lapak['harga']);?></li>
+                        <li class="ms-3 list-group-item">Pemilik : <?=htmlspecialchars($detail_tb_lapak['fullname_tb_user']);?></li>
+                        <li class="ms-3 list-group-item">No Telephone : <?=htmlspecialchars($detail_tb_lapak['no_telp_tb_user']);?></li>
+                        <li class="ms-3 list-group-item">Alamat : <?=htmlspecialchars($detail_tb_lapak['alamat_tb_user']);?></li>
                     </ul>
                     <div class="card-body text-center">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
@@ -64,7 +65,7 @@ if ($_SESSION['fullnames'] == true) :
                             <?php if($_SESSION['ids'] == $detail_tb_lapak['id_tb_user']): ?>
                             <div class="col">
                                 <div class="d-grid gap-1 mt-3 mt-sm-3 mt-lg-0 mt-xl-0">
-                                    <a class="btn btn-warning" href="#" >Edit Post</a>
+                                    <a class="btn btn-warning" href="edit.php?id=<?=$_GET['id'];?>" >Edit Post</a>
                                 </div>
                             </div>
                             <div class="col">
