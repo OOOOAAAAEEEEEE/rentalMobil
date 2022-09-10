@@ -27,7 +27,16 @@
                 <?php endif; ?>
 
                 <?php if (isset($_SESSION['fullnames'])) : ?>
-                    
+                                        
+                    <?php  
+                        require '../inc/conn.inc.php';
+                        $id_SESSION = $_SESSION['ids'];
+                        $query_tb_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE id='$id_SESSION';");
+                        $fetch_tb_users = mysqli_fetch_all($query_tb_user, MYSQLI_ASSOC);
+                        
+                        foreach($fetch_tb_users as $fetch_tb_user);
+                    ?>
+
                     <?php 
                     // include '../inc/conn.inc.php';
                     // $idSesi = $_SESSION['ids'];
@@ -76,7 +85,7 @@
 
                         <ul class="dropdown-menu dropdown-menu-dark">
 
-                            <li><a class="dropdown-item" href="../profile.php">Profile</a></li>
+                            <li><a class="dropdown-item" href="../profile.php">Profile (<?=$fetch_tb_user['fullname'];?>)</a></li>
                             <li><a class="dropdown-item" href="../CRUD/tambahDataLapak.php">Tambah Lapak</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -91,28 +100,12 @@
             </ul>
             <ul class="navbar-nav me-1 mb-2 mb-lg-0">
                 <?php if (isset($_SESSION['fullnames'])) : ?>
-                    
-                    <?php  
-                        require '../inc/conn.inc.php';
-                        $id_SESSION = $_SESSION['ids'];
-
-                        $query_tb_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE id='$id_SESSION';");
-                        $fetch_tb_users = mysqli_fetch_all($query_tb_user, MYSQLI_ASSOC);
-                        
-                        foreach($fetch_tb_users as $fetch_tb_user);
-                    ?>
-
                     <li class="nav-item">
                         <form class="d-flex" role="search" action="../search.php" method="POST">
                             <input class="form-control me-2" name="cari" type="text" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" name="search" type="submit">Search</button>
                         </form>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active">Selamat Datang <?php //$fullnameS = $fetch_tb_user['fullname'];
-                                                                                //echo "$fullnameS"; ?></a>
-                    </li> -->
-
                 <?php else : ?>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.php">Login</a>
