@@ -31,3 +31,17 @@ if(isset($_POST['checkIntegrity'])){
     }
     return checkIntegrity();
 }
+
+if(isset($_POST['search'])){
+    require 'conn.inc.php';
+
+        $cari = $_POST['cari'];
+        $search_query_tb_lapak = mysqli_query($conn, "SELECT * FROM tb_lapak 
+        WHERE alamat_tb_user LIKE '%$cari%'
+        OR merk LIKE '%$cari%'
+        OR sub_merk LIKE '%$cari%'
+        OR tipe_mobil LIKE '%$cari%'
+        OR warna LIKE '%$cari%'");
+
+        $search_fetch_tb_lapak = mysqli_fetch_all($search_query_tb_lapak, MYSQLI_ASSOC);
+}

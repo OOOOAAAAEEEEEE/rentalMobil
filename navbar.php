@@ -97,13 +97,18 @@
 
                         $query_tb_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE id='$id_SESSION';");
                         $fetch_tb_users = mysqli_fetch_all($query_tb_user, MYSQLI_ASSOC);
-                        
                         foreach($fetch_tb_users as $fetch_tb_user);
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link active">Selamat Datang <?php $fullnameS = $fetch_tb_user['fullname'];
-                                                                                echo "$fullnameS"; ?></a>
+                        <form class="d-flex" role="search" action="search.php" method="POST">
+                            <input class="form-control me-2" name="cari" type="text" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" name="search" type="submit">Search</button>
+                        </form>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active">Selamat Datang <?php //$fullnameS = $fetch_tb_user['fullname'];
+                                                                                //echo "$fullnameS"; ?></a>
+                    </li> -->
 
                 <?php else : ?>
                 <li class="nav-item">
