@@ -57,7 +57,7 @@
                             <div class="col">
                                 <div class="mt-4">
                                     <label for="" class="form-label"> Harga </label>
-                                    <input type="text" name="harga" class="form-control" placeholder="Seperti '1000000'" required>
+                                    <input type="text" name="harga" class="form-control" placeholder="Seperti '1.000.000'" required>
                                 </div>
                             </div>
                             <div class="col">

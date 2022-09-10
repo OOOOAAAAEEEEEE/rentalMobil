@@ -28,13 +28,13 @@ foreach($fetch_assoc as $tb_lapak);
                             <div class="col">
                                 <div class="">
                                     <label for="" class="form-label"> Merk </label>
-                                    <input type="text" name="merk" class="form-control" value="<?=$tb_lapak['merk'];?>" autofocus>
+                                    <input type="text" name="merk" class="form-control" value="<?=htmlspecialchars($tb_lapak['merk']);?>" autofocus>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="">
                                     <label for="" class="form-label"> Sub-Merk & Tipe </label>
-                                    <input type="text" name="sub_merk" class="form-control" value="<?=$tb_lapak['sub_merk'];?>">
+                                    <input type="text" name="sub_merk" class="form-control" value="<?=htmlspecialchars($tb_lapak['sub_merk']);?>">
                                 </div>
                             </div>
                             <div class="col">
@@ -44,38 +44,39 @@ foreach($fetch_assoc as $tb_lapak);
                                         $value = $tb_lapak['tipe_mobil'];
                                     ?>
                                     <select class="form-select" name="tipe_mobil">
-                                        <option value="<?php htmlspecialchars($value);?>"><?=$value;?> || Current Position</option>
+                                        <option value="<?=htmlspecialchars($value);?>"><?=htmlspecialchars($value);?> || Current Position</option>
                                         <option value="Sedan">Sedan</option>
                                         <option value="Hatchback">Hatchback</option>
                                         <option value="MPV">MPV</option>
                                         <option value="SUV">SUV</option>
                                         <option value="Jeep">Jeep</option>
+                                        <option value="Double Cabin"> Double Cabin </option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mt-4">
                                     <label class="form-label"> No Polisi </label>
-                                    <input type="text" name="no_polisi" class="form-control" value="<?=$tb_lapak['no_polisi'];?>">
+                                    <input type="text" name="no_polisi" class="form-control" value="<?=htmlspecialchars($tb_lapak['no_polisi']);?>">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mt-4">
                                     <label class="form-label"> Warna </label>
-                                    <input type="text" name="warna" class="form-control" value="<?=$tb_lapak['warna'];?>">
+                                    <input type="text" name="warna" class="form-control" value="<?=htmlspecialchars($tb_lapak['warna']);?>">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mt-4">
                                     <label for="" class="form-label"> Harga </label>
-                                    <input type="text" name="harga" class="form-control" value="<?=$tb_lapak['harga'];?>">
+                                    <input type="text" name="harga" class="form-control" value="<?=htmlspecialchars($tb_lapak['harga']);?>">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mt-4">
                                     <div class="form-floating">
                                         <textarea class="form-control" name="deskripsi" id="floatingTextarea1" style="width: 250px ; height: 150px">
-                                            <?=$tb_lapak['deskripsi'];?>
+                                            <?=htmlspecialchars($tb_lapak['deskripsi']);?>
                                         </textarea>
                                         <label for="floatingTextarea1">Masukkan Deskripsi Barang</label>
                                     </div>

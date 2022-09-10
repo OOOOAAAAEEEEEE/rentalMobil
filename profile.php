@@ -34,7 +34,7 @@ if ($_SESSION['fullnames'] == true) :
                     <div class="row row-cols-1">
                         <form action="inc/profile.inc.php" method="POST" enctype="multipart/form-data">
                             <div class="col">
-                                <input class="form-control" name="my_image" type="file" required>
+                                <input class="form-control" name="my_image" type="file">
                             </div>
                             <div class="col">
                                 <div class="d-grid gap-1">
