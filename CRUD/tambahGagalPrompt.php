@@ -17,7 +17,8 @@ if ($_SESSION['fullnames'] == true) :
             <div class="card-body">
                 <h5 class="card-title">Alasan: Tidak sesuai syarat</h5>
                 <p class="card-text">Tolong cek kembali penulisan sesuai dengan placeholder yang ada,
-                    pastikan tulis sesuai dengan formatnya dan tuliskan tanpa tanda petik ('').
+                    pastikan tulis sesuai dengan formatnya dan tuliskan tanpa tanda petik (''), dan
+                    pastikan gambar anda tidak lebih dari 10MB.
                 </p>
                 <a href="tambahDataLapak.php" class="btn btn-primary">Input kembali data anda</a>
             </div>

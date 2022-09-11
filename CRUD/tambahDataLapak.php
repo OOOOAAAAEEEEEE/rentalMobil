@@ -15,7 +15,7 @@
                 <h5>Tambah Lapak</h5>
             </div>
                 <div class="card-body">
-                    <form action="inc/tambahDataLapak.inc.php" method="POST">
+                    <form action="inc/tambahDataLapak.inc.php" method="POST" enctype="multipart/form-data">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                             <div class="col">
                                 <div class="">
@@ -35,6 +35,7 @@
                                     <select class="form-select" name="tipe_mobil" required>
                                         <option value="">--Pilih Tipe Mobil--</option>
                                         <option value="Sedan">Sedan</option>
+                                        <option value="LCGC"> LCGC</option>
                                         <option value="Hatchback">Hatchback</option>
                                         <option value="MPV">MPV</option>
                                         <option value="SUV">SUV</option>
@@ -59,16 +60,40 @@
                                     <label for="" class="form-label"> Harga </label>
                                     <input type="text" name="harga" class="form-control" placeholder="Seperti '1.000.000'" required>
                                 </div>
+                            </div>                
+                            <div class="col">
+                                <div class="mt-4">
+                                    <label class="form-label"> Pilih Gambar File Mobil 1</label>
+                                    <input class="form-control" name="my_image" type="file" required>
+                                </div>
                             </div>
                             <div class="col">
                                 <div class="mt-4">
+                                    <label class="form-label"> Pilih Gambar File Mobil 2</label>
+                                    <input class="form-control" name="my_image_1" type="file" required>
+                                </div>
+                            </div> 
+                            <div class="col">
+                                <div class="mt-4">
+                                    <label class="form-label"> Pilih Gambar File Mobil 3</label>
+                                    <input class="form-control" name="my_image_2" type="file" required>
+                                </div>
+                            </div><div class="col">
+                                <div class="mt-4">
+                                    <label class="form-label"> Pilih Gambar File Mobil 4</label>
+                                    <input class="form-control" name="my_image_3" type="file" required>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mt-4">
                                     <div class="form-floating">
-                                        <textarea class="form-control" name="deskripsi" placeholder="Leave a comment here" id="floatingTextarea1" style="width: 250px ; height: 150px" required></textarea>
+                                        <textarea class="form-control" name="deskripsi" placeholder="Leave a comment here" id="floatingTextarea1"  required></textarea>
                                         <label for="floatingTextarea1">Masukkan Deskripsi Barang</label>
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
                         <div class="row">
                             <div class="mt-4">
