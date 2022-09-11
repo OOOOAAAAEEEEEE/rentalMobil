@@ -4,20 +4,13 @@ include 'conn.inc.php';
     if( isset($_POST['kirim']) && isset($_FILES['my_image'])) {
         // require 'conn.inc.php';
         session_start();
-        $fullname = $_POST['fullname'];
-        $usernameS = $_POST['username'];
-        $email = $_POST['email'];
-        $no_telp = $_POST['no_telp'];
-        $alamat = $_POST['alamat'];
-
         $id_SESSION = $_SESSION['ids'];
-
         $img_size = $_FILES['my_image']['size'];
         $error = $_FILES['my_image']['error'];
 
             if($error === 0){
 
-                if($img_size > 4194304){
+                if($img_size >= 4194304){
                     header("Location: ../tambahGagalPrompt.php");
                     exit();
 
@@ -28,7 +21,7 @@ include 'conn.inc.php';
                     $allowed_exs = array('jpg', 'jpeg', 'png');
 
                         if(in_array($img_ex_lc, $allowed_exs)){
-                            $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
+                            $new_img_name = uniqid("Profile-", true).'.'.$img_ex_lc;
                             $img_upload_path = '../img/uploadsProfile/'.$new_img_name;
                             $tmp_name = $_FILES['my_image']['tmp_name'];
                             move_uploaded_file($tmp_name, $img_upload_path);
