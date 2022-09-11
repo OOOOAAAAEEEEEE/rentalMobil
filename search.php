@@ -41,7 +41,7 @@
                 <div class="">
                     <div class="col">
                         <div class="card mx-md-3 mx-lg-auto mb-3" style="width: 18.5rem;">
-                            <img style="max-width: 300px; max-height: 150px;" src="https://via.placeholder.com/300x150" class="card-img-top img-thumbnail" alt="...">
+                            <img style="max-width: 300px; max-height: 150px;" src="img/uploadsInsert/<?=$result['img_url'] ?>" class="card-img-top img-thumbnail" alt="...">
                                 <div class="card-body shadow-lg bg-body rounded p-4">
                                     <h3 class="card-title"> <?= htmlspecialchars($result['merk']); ?> </h3>
                                     <h5 class="card-title"> <?= htmlspecialchars($result['sub_merk']); ?> </h5>
