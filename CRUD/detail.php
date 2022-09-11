@@ -15,12 +15,40 @@ if ($_SESSION['fullnames'] == true) :
             $detail_query = mysqli_query($conn, "SELECT * FROM tb_lapak WHERE id='$id';");
             $detail_fetch_assoc = mysqli_fetch_all($detail_query, MYSQLI_ASSOC);
         ?>
-
     <?php foreach($detail_fetch_assoc as $detail_tb_lapak): ?>
-        <div class="container-xxl">
+        <div class="container">
+            <div class="">
+                <div id="carouselMainImg" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img style="max-width: 1280px; max-height: 600px;" src="../img/uploadsInsert/<?=$detail_tb_lapak['img_url']?>"class="d-block w-100" alt="...">
+                        </div>
+                        <div  class="carousel-item">
+                            <img style="max-width: 1280px; max-height: 600px;" src="../img/uploadsInsert/<?=$detail_tb_lapak['img_url_1']?>" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="max-width: 1280px; max-height: 600px;" src="../img/uploadsInsert/<?=$detail_tb_lapak['img_url_2']?>" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="max-width: 1280px; max-height: 600px;" src="../img/uploadsInsert/<?=$detail_tb_lapak['img_url_3']?>" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMainImg" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMainImg" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-xxl mb-5">
             <div class="float-none">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="ms-3 card-title"> <?= htmlspecialchars($detail_tb_lapak['merk']); ?> </h3>
                         <h5 class="ms-3 card-title"> <?= htmlspecialchars($detail_tb_lapak['sub_merk']); ?> </h5>
