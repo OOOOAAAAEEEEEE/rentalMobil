@@ -13,13 +13,13 @@
             <div id="carouselMainImg" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="...">
+                        <img style="max-width: 1280px; max-height: 600px;" src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="...">
+                    </div>
+                    <div  class="carousel-item">
+                        <img style="max-width: 1280px; max-height: 600px;" src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/1200x600" class="d-block w-100" alt="...">
+                        <img style="max-width: 1280px; max-height: 600px;" src="https://via.placeholder.com/1200x600" class="d-block w-100" alt="...">
                     </div>
                 </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselMainImg" data-bs-slide="prev">
@@ -46,7 +46,7 @@
                 <div class="">
                     <div class="col">
                         <div class="card mx-md-3 mx-lg-auto mb-3" style="width: 18.5rem;">
-                            <img style="max-width: 300px; max-height: 150px;" src="https://via.placeholder.com/300x150" class="card-img-top img-thumbnail" alt="...">
+                            <img style="max-width: 300px; max-height: 150px;" src="img/uploadsInsert/<?=$tb_lapak['img_url'];?>" class="card-img-top img-thumbnail" alt="...">
                                 <div class="card-body shadow-lg bg-body rounded p-4">
                                     <h3 class="card-title"> <?= htmlspecialchars($tb_lapak['merk']); ?> </h3>
                                     <h5 class="card-title"> <?= htmlspecialchars($tb_lapak['sub_merk']); ?> </h5>

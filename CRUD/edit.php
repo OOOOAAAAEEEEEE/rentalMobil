@@ -46,11 +46,12 @@ foreach($fetch_assoc as $tb_lapak);
                                     <select class="form-select" name="tipe_mobil">
                                         <option value="<?=htmlspecialchars($value);?>"><?=htmlspecialchars($value);?> || Current Position</option>
                                         <option value="Sedan">Sedan</option>
+                                        <option value="LCGC">LCGC</option>
                                         <option value="Hatchback">Hatchback</option>
                                         <option value="MPV">MPV</option>
                                         <option value="SUV">SUV</option>
                                         <option value="Jeep">Jeep</option>
-                                        <option value="Double Cabin"> Double Cabin </option>
+                                        <option value="Double Cabin">Double Cabin</option>
                                     </select>
                                 </div>
                             </div>

@@ -33,12 +33,12 @@ if ($_SESSION['fullnames'] == true) :
                     <div class="">
                         <div class="col">
                             <div class="card mx-md-4 mx-lg-auto mb-3" style="width: 16.5rem;">
-                                <img src="https://via.placeholder.com/100" class="card-img-top img-thumbnail" alt="...">
+                                <img src="img/uploadsInsert/<?=htmlspecialchars($tb_lapak['img_url']);?>" style="max-width: 300px; max-height: 150px;" class="card-img-top img-thumbnail" alt="...">
                                     <div class="card-body shadow-lg bg-body rounded p-4">
                                         <h3 class="card-title"> <?= htmlspecialchars($tb_lapak['merk']); ?> </h3>
                                         <h5 class="card-title"> <?= htmlspecialchars($tb_lapak['sub_merk']); ?> </h5>
                                         <p class="card-text" style="text-align: center;"> Harga Sewa Perhari</p>
-                                        <p class="card-text" style="text-align: center;"> <?= htmlspecialchars($tb_lapak['harga']); ?> </p>
+                                        <p class="card-text" style="text-align: center;"> Rp<?= htmlspecialchars($tb_lapak['harga']); ?> </p>
                                         <div class="d-grid gap-1">
                                             <a class="btn btn-primary" href="CRUD/detail.php?id=<?=$tb_lapak['id'];?>" > Detail</a>
                                         </div>
