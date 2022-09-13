@@ -30,13 +30,16 @@ require 'inc/daftar.inc.php';
           <div class="card-body">
             <form style="max-width:300px; margin:auto;" action="inc/daftar.inc.php" method="POST">
                 <h1 class="h3 my-4 font-weight-normal">Sign up Page</h1>
-                  <input type="text" name="fullname" class="form-control my-2" placeholder="Input Nama lengkap" autofocus required>
-                  <input type="email" name="email" class="form-control my-2" placeholder="Input Email" required>
-                  <input type="text" name="username" class="form-control my-2" placeholder="Input Username" required>
-                  <input type="password" name="pwd" class="form-control my-2" placeholder="Input Password" required>
-                  <input type="tel" name="no_telp" class="form-control my-2" placeholder="Input No Telephone" required>
+                  <input type="text" name="fullname" class="form-control my-2" placeholder="Masukkan Nama lengkap" autofocus required>
+                  <input type="email" name="email" class="form-control my-2" placeholder="Masukkan Email" required>
+                  <input type="text" name="username" class="form-control my-2" placeholder="Masukkan Username" required>
+                  <input type="password" name="pwd" class="form-control my-2" placeholder="Masukkan Password" required>
+                  <div class="input-group">
+                    <span class="input-group-text my-2" id="basic-addon1">+62</span>
+                    <input type="tel" name="no_telp" class="form-control my-2" placeholder="Masukkan No Telephone Anda" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
                 <div class="form-floating">
-                  <textarea class="form-control my-2" name="alamat" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px" required></textarea>
+                  <textarea class="form-control my-2" name="alamat" placeholder="Masukkan Alamat Anda" id="floatingTextarea2" style="height: 150px" required></textarea>
                   <label for="floatingTextarea2">Masukkan Alamat</label>
                 </div>
                 <div class="d-grid gap-2">
