@@ -75,9 +75,9 @@ if ($_SESSION['fullnames'] == true) :
                         <li class="ms-3 list-group-item">Warna Mobil : <?=htmlspecialchars($detail_tb_lapak['warna']);?></li>
                         <li class="ms-3 list-group-item">Harga Sewa Mobil Perhari : Rp<?=htmlspecialchars($detail_tb_lapak['harga']);?></li>
                         <li class="ms-3 list-group-item">Pemilik : <?=htmlspecialchars($detail_tb_lapak['fullname_tb_user']);?></li>
-                        <li class="ms-3 list-group-item">No Telephone : 0<?=htmlspecialchars($detail_tb_lapak['no_telp_tb_user'])?></li>
-                        <li class="ms-3 list-group-item">Alamat : <?=htmlspecialchars($detail_tb_lapak['alamat_tb_user']);?></li>
-                        <li class="ms-3 list-group-item">Tanggal Submit : <?=htmlspecialchars($detail_tb_lapak['created_at']);?></li>
+                        <li class="ms-3 list-group-item">No Telephone : 0<?=htmlspecialchars($detail_tb_lapak['no_telp_tb_user']);?></li>
+                        <li class="ms-3 list-group-item">Alamat : <a title="Cari alamat ke google maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=<?= memisahkanAlamat();?>"><?=$detail_tb_lapak['alamat_tb_user'];?></a></li>
+                        <li class="ms-3 list-group-item">Tanggal Postingan : <?=htmlspecialchars($detail_tb_lapak['created_at']);?></li>
                     </ul>
                     <div class="card-body text-center">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">

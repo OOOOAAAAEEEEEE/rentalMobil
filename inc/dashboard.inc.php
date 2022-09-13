@@ -46,3 +46,22 @@ if(isset($_POST['search'])){
 
         $search_fetch_tb_lapak = mysqli_fetch_all($search_query_tb_lapak, MYSQLI_ASSOC);
 }
+
+
+function memisahkanAlamat(){
+    include 'conn.inc.php';
+    $id_SESSION = $_SESSION['ids'];
+    $select_query = mysqli_query($conn, "SELECT alamat FROM tb_user WHERE id='$id_SESSION';");
+    $fetch_select = mysqli_fetch_all($select_query, MYSQLI_ASSOC);
+    foreach($fetch_select as $result_data);
+    
+    $alamat = $result_data['alamat'];
+    $seperate = explode(" " ,$alamat);
+    
+
+    //var_dump(json_encode($seperate));
+
+    for($i=0; $i < count($seperate); $i++)
+        echo $seperate[$i]."+";
+
+}
