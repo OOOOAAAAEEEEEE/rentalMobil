@@ -14,8 +14,7 @@ if (isset($_POST["kirim"])) {
         if (userExist($conn, $username) !== false) {
             header("location: ../daftar.php?error=usernamealreadytaken");
             exit();
-        }
-
+        }else{
             createUser($conn, $fullname, $email, $username, $pwd, $no_telp, $alamat);
-
         }
+    }

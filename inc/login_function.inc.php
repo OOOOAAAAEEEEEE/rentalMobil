@@ -25,22 +25,30 @@ function userExist($conn, $username){
     mysqli_stmt_close($stmt);
 }
 
-function createUser($conn, $fullname, $email, $username, $pwd, $no_telp, $address){
+function createUser($conn, $fullname, $email, $username, $pwd, $no_telp, $alamat){
+    // $fullname = $_POST['fullname'];
+    // $email = $_POST['email'];
+    // $username = $_POST['username'];
+    // $pwd = $_POST['pwd'];
+    // $no_telp = $_POST['no_telp'];
+    // $alamat = $_POST['alamat'];
+    
     $query = "INSERT INTO tb_user (fullname, email, username, pwd, no_telp, alamat) VALUES (? , ? , ? , ? , ? , ?);";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $query)){
         header("Location: ../daftar.php");
         exit();
+
+    }else{
+
+        $hashPwd = password_hash($pwd, PASSWORD_DEFAULT);
+        mysqli_stmt_bind_param($stmt, "ssssss", $fullname, $email, $username, $hashPwd, $no_telp, $alamat);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
     }
-
-    $hashPwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($stmt, "ssssss", $fullname, $email, $username, $hashPwd, $no_telp, $address);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header("Location: ../masuk.php?berhasil");
-    exit();
+        header("Location: ../masuk.php?berhasil");
+        exit();
 }
 
 function loginUser($conn, $username, $pwd){

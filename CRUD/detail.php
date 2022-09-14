@@ -14,8 +14,17 @@ if ($_SESSION['fullnames'] == true) :
             $id = $_GET['id'];
             $detail_query = mysqli_query($conn, "SELECT * FROM tb_lapak WHERE id='$id';");
             $detail_fetch_assoc = mysqli_fetch_all($detail_query, MYSQLI_ASSOC);
+            
         ?>
     <?php foreach($detail_fetch_assoc as $detail_tb_lapak): ?>
+        <?php  
+        
+        $alamat = $detail_tb_lapak['alamat_tb_user'];
+        $seperate = explode(" " ,$alamat);
+            
+                
+                
+        ?>
         <div class="container">
             <div class="">
                 <div id="carouselMainImg" class="carousel slide" data-bs-ride="carousel">
@@ -76,7 +85,7 @@ if ($_SESSION['fullnames'] == true) :
                         <li class="ms-3 list-group-item">Harga Sewa Mobil Perhari : Rp<?=htmlspecialchars($detail_tb_lapak['harga']);?></li>
                         <li class="ms-3 list-group-item">Pemilik : <?=htmlspecialchars($detail_tb_lapak['fullname_tb_user']);?></li>
                         <li class="ms-3 list-group-item">No Telephone : 0<?=htmlspecialchars($detail_tb_lapak['no_telp_tb_user']);?></li>
-                        <li class="ms-3 list-group-item">Alamat : <a title="Cari alamat ke google maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=<?= memisahkanAlamat();?>"><?=$detail_tb_lapak['alamat_tb_user'];?></a></li>
+                        <li class="ms-3 list-group-item">Alamat : <a title="Cari alamat ke google maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=<?php for($i=0; $i < count($seperate); $i++){ echo $seperate[$i]."+";}?>"><?=$detail_tb_lapak['alamat_tb_user'];?></a></li>
                         <li class="ms-3 list-group-item">Tanggal Postingan : <?=htmlspecialchars($detail_tb_lapak['created_at']);?></li>
                     </ul>
                     <div class="card-body text-center">
