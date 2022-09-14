@@ -1,4 +1,4 @@
-<?php include_once 'HPHeader.php'; ?>
+<?php include_once 'HPheader.php'; ?>
 <?php include_once 'navbar.php'; ?>
 
 <div class="container">
